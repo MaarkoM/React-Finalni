@@ -1,10 +1,9 @@
-import Apartment from "./Apartment";
-import SignUp from "./Account/SignUp"
+import  FrontPage  from "./frontPage";
 
 function App() {
   return (
     <>
-      <SignUp></SignUp>
+      <FrontPage></FrontPage>
     </>
   );
 }
