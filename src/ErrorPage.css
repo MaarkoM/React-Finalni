@@ -1,0 +1,24 @@
+#errorPage{
+    background-image: url("assets/errWall3.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+.astronaut{
+    height: 60vh;
+    width: 30rem;
+    position: absolute;
+    top: 40%;
+    left: 12%;
+    z-index: 1;
+}
+.cloud{
+    height: 40vh;
+    width: 20rem;
+}
+h1{
+    font-size: 3rem;
+}

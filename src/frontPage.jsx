@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const FrontPage = () => {
   return (
     <>
-    <input type="submit" value="Druga stranica" />
+    <Link to={`/LoginSignUp`}>Login</Link>
     </>
   )
 }
