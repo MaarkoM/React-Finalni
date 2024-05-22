@@ -1,9 +1,13 @@
-import  FrontPage  from "./frontPage";
+import GuestApp from "./FrontPage/GuestApp";
+import Header from "./FrontPage/Header";
+import SideFilter from "./FrontPage/SideFilter";
 
 function App() {
   return (
     <>
-      <FrontPage></FrontPage>
+      <Header></Header>
+      <SideFilter></SideFilter>
+      <GuestApp></GuestApp>
     </>
   );
 }

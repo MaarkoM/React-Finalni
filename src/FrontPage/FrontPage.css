@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    padding-left: 30rem;
+}
+.logo img{
+    width: 14rem;
+}
+.headerContainer{
+    background-color: #3D194A;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+svg:not(:root).svg-inline--fa{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.profileIconContainer{
+    padding: 1rem 30rem 0 0;
+}
+.switchContainer{
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 40rem 0 40rem;
+    background-color: #7b929b;
+}
+.guest button{
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #a87e74;
+}
+.host button{
+    padding: 1rem 2.5rem 1rem 2.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #a87e74;
+}
+.displayBtn{
+    color: purple;
+}
+

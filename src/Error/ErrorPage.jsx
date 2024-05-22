@@ -1,7 +1,7 @@
 import { useRouteError } from "react-router-dom";
-import "./ErrorPage.css"
-import  Astronaut from "./assets/astronaut.svg"
-import Cloud from './assets/speechCloud.svg'
+import "../Error/ErrorPage.css"
+import  Astronaut from "../assets/astronaut.svg"
+import Cloud from '../assets/speechCloud.png'
 
 function ErrorPage(){
     const error = useRouteError();

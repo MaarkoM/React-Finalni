@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import LoginSignUp from './Account/LoginSignUp.jsx'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import ErrorPage from './ErrorPage.jsx'
+import ErrorPage from './Error/ErrorPage.jsx'
 import './index.css'
-import Apartment from './Apartment.jsx'
 
 const router = createBrowserRouter([
   {

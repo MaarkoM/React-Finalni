@@ -1,0 +1,7 @@
+.filterContainer{
+    background-color: beige;
+    width: 10rem;
+    height: 60rem;
+    margin-left: 25rem;
+    display: inline-block;
+}
