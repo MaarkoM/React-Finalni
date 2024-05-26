@@ -1,7 +1,72 @@
-.GuestAppContainer{
-    display: inline-block;
+.GuestWrapper{
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    max-width: 1600px;
+    left: 20rem;
+    top: 18.7rem;
+}
+.apartmentImg{
+    height: 12rem;
+    width: 100%;
+    border-radius: 30px;
+    object-fit: cover;
+    padding: 1rem;
+    transition: 200ms ease-in;
 }
 .apartmentCard{
-    height: 4rem;
-    width: 4rem;
+    overflow: hidden;
+    box-shadow: 0 2px 20px lightgrey;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 200ms ease-in;
+}
+.apartmentCard h4{
+    padding: 1rem;
+}
+.apartmentCard p{
+    padding: 1rem;
+}
+.apartmentCard button{
+    padding: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1rem;
+    border: 2px solid ;
+    background: transparent;
+    border-radius: 10px;
+    transition:200ms ease-in;
+}
+.apartmentCard:hover{
+    transform: scale(1.02);
+}
+.apartmentCard button:hover{
+    border: 2px solid purple;
+    color: purple;
+}
+.strelice{
+    position: absolute;
+    display: inline;
+}
+.desnaStrelica{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    left: 102.1rem;
+    top: -68rem;
+    z-index: 1;
+}
+.levaStrelica{
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    left: 97.1rem;
+    top: -68rem;
+    z-index: 1;
 }

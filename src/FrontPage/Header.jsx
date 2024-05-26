@@ -1,10 +1,9 @@
 import React, {useState} from "react";
-import Logo from "../assets/BookingBuddy.png";
+import Logo from "../assets/header2.png";
 import { Link } from "react-router-dom";
-import "../FrontPage/FrontPage.css";
+import "../FrontPage/Header.css";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 
 const Header = () => {
 
@@ -14,7 +13,15 @@ const Header = () => {
     <>
     <div className="headerContainer">
       <div className="logo">
-        <img src={Logo} alt="logo" />
+        <img src={Logo} alt="logo"/>
+      </div>
+      <div className="linkWrapper">
+        <ul className="links">
+          <li className="list"><Link className="link AboutMe">About Me</Link></li>
+          <li className="list"><Link className="link AboutMe">Github</Link></li>
+          <li className="list"><Link className="link AboutMe">LinkedIn</Link></li>
+          <li className="list"><Link className="link AboutMe">Instagram</Link></li>
+        </ul>
       </div>
       <div className="profileIconContainer">
       <FontAwesomeIcon icon={faCircleUser} className="profileIcon"/>
@@ -24,12 +31,12 @@ const Header = () => {
       {action==="Guest"?<div className="guest">
         <button className="displayBtn">Guest</button>
       </div>:<div className="guest">
-        <button onClick={()=>{setAction("Guest")}}>Guest</button>
+        <button className="standbyBtn" onClick={()=>{setAction("Guest")}}>Guest</button>
       </div>}
       {action==="Host"?<div className="host ">
         <button className="displayBtn">Host</button>
       </div>:<div className="host">
-        <button onClick={()=>{setAction("Host")}}>Host</button>
+        <button className="standbyBtn" onClick={()=>{setAction("Host")}}>Host</button>
       </div>}
     </div>
     </>

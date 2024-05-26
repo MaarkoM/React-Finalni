@@ -1,7 +1,53 @@
 .filterContainer{
-    background-color: beige;
-    width: 10rem;
-    height: 60rem;
-    margin-left: 25rem;
-    display: inline-block;
+    width: 18rem;
+    height: 64rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    gap: 1rem;
+    border: 2px solid;
+    margin: 0.7rem;
+    border-radius: 20px;
+    padding: 1rem 0 1rem 0;
+}
+.filterContainer h3{
+    border-bottom: 1px solid;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.country{
+    border-bottom: 1px solid;
+    text-align: center;
+}
+#dropdown-basic-button{
+    margin-bottom: 1rem;
+}
+.AllFilter h4{
+    text-align: center;
+}
+.filterWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0 0 2.5rem;
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid;
+}
+.checkBox{
+    position: absolute;
+    left: 15rem;
+    /* margin-left: 3rem; */
+    width: 1.1rem;
+    height: 1.1em;
+    accent-color: purple;
+}
+.pTypeTitle{
+    padding: 1rem;
+}
+.pRatingTitle{
+    padding: 1rem;
+}
+.pRatingFilter{
+    border-bottom: 0;
 }
