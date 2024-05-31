@@ -19,12 +19,13 @@
     flex-direction: row;
     height: 10rem;
 }
-svg:not(:root).svg-inline--fa{
+.profileIcon{
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     position: absolute;
     right: 4rem;
+    color: white;
 }
 .profileIconContainer{
     padding: 4rem 7rem 0 0;

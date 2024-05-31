@@ -24,7 +24,7 @@ const Header = () => {
         </ul>
       </div>
       <div className="profileIconContainer">
-      <FontAwesomeIcon icon={faCircleUser} className="profileIcon"/>
+      <Link to="LoginSignUp"><FontAwesomeIcon icon={faCircleUser} className="profileIcon"></FontAwesomeIcon></Link>
       </div>
     </div>
     <div className="switchContainer">

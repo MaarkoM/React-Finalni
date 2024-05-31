@@ -4,11 +4,18 @@ import SideFilter from "./FrontPage/SideFilter";
 import {React, useState} from "react";
 
 function App() {
+  const [filters, setFilters] = useState({});
+
+  const handleFiltersChange = (newFilters) => {
+    setFilters(newFilters);
+  };
+
   return (
     <>
       <Header></Header>
-      <SideFilter></SideFilter>
-      <GuestApp></GuestApp>
+      <SideFilter onFiltersChange={handleFiltersChange}></SideFilter>
+      <GuestApp filters={filters}></GuestApp>
+      
     </>
   );
 }

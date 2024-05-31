@@ -7,6 +7,10 @@
     max-width: 1600px;
     left: 20rem;
     top: 18.7rem;
+    overflow: hidden;
+    padding: 15px;
+    box-shadow: 0 2px 20px lightgrey;
+    border-radius: 8px;
 }
 .apartmentImg{
     height: 12rem;
@@ -16,8 +20,7 @@
     padding: 1rem;
     transition: 200ms ease-in;
 }
-.apartmentCard{
-    overflow: hidden;
+.apartmentCard{ 
     box-shadow: 0 2px 20px lightgrey;
     border-radius: 10px;
     display: flex;
@@ -53,20 +56,19 @@
 .strelice{
     position: absolute;
     display: inline;
+    font-size: 2rem;
 }
 .desnaStrelica{
     position: absolute;
-    width: 5rem;
-    height: 5rem;
     left: 102.1rem;
-    top: -68rem;
+    top: -69rem;
     z-index: 1;
+    cursor: pointer;
 }
 .levaStrelica{
     position: absolute;
-    width: 5rem;
-    height: 5rem;
     left: 97.1rem;
-    top: -68rem;
+    top: -69rem;
     z-index: 1;
+    cursor: pointer;
 }

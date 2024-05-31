@@ -60,7 +60,13 @@
 
 .FontAwesomeIcon {
   margin: 0px 30px;
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  cursor: auto;
+  right: 0;
 }
+
 
 .input input {
   height: 50px;
@@ -84,7 +90,7 @@
   cursor: pointer;
 }
 
-.submitContainer {
+.toggleContainer {
   display: flex;
   gap: 30px;
   margin: 60px auto;
@@ -108,3 +114,4 @@
   background: #eaeaea;
   color: #676767;
 }
+

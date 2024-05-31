@@ -1,97 +1,101 @@
-import {React, useState, useEffect} from 'react'
-import '../FrontPage/GuestApp.css'
+import React, { useState, useEffect } from "react";
+import "../FrontPage/GuestApp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft } from "@fortawesome/free-solid-svg-icons/faAngleLeft";
-import { faAngleRight } from "@fortawesome/free-solid-svg-icons/faAngleRight";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
-const GuestApp = () => {
+const GuestApp = ({ filters }) => {
+  const [apartments, setApartments] = useState([]);
+  const [startIndex, setStartIndex] = useState(0);
+  const [filteredApartments, setFilteredApartments] = useState([]);
 
-    const[apartments,setApartments] = useState([]);
-    const [seed, setSeed] = useState(1);
+  const fetchApartments = () => {
+    fetch("https://mocki.io/v1/c1385134-e705-47f2-8f7e-2409ed535024")
+      .then((res) => res.json())
+      .then((data) => {
+        setApartments(data);
+        setFilteredApartments(data);
+      });
+  };
 
-    useEffect(()=>{
-        fetch('https://mocki.io/v1/63b929a3-1802-4ca0-82fc-66b599f30195')
-        .then((res)=>{
-            return res.json();
-        })
-        .then((data)=>{
-            console.log(data);
-            setApartments(data);
-        })
-    }, []);
+  useEffect(() => {
+    fetchApartments();
+  }, []);
 
-    const reset = () => {
-      setSeed(Math.random());
-  }
+  const handleLeftClick = () => {
+    if (startIndex > 0) {
+      setStartIndex(startIndex - 10);
+    }
+  };
 
-    let leva = document.querySelector(".levaStrelica");
-    let desna = document.querySelector(".desnaStrelica");
-    
+  const handleRightClick = () => {
+    if (startIndex + 10 < filteredApartments.length) {
+      setStartIndex(startIndex + 10);
+    }
+  };
 
-    let brojacStr = 1;
-    let brojacLeva = 0;
-    let brojacDesna = 10;
-    let klasaPr = false;
-    let klasaDr = false;
+  const handleFiltering = () => {
+    let filtered = apartments.filter((apartment) => {
+      return (
+        (!filters.freeWifi || apartment.freeWifi) &&
+        (!filters.aircon || apartment.aircon) &&
+        (!filters.parking || apartment.parking) &&
+        (!filters.pets || apartment.pets) &&
+        (!filters.roomS || apartment.roomS) &&
+        (!filters.apartment || apartment.apartment) &&
+        (!filters.villa || apartment.villa) &&
+        (!filters.hotel || apartment.hotel) &&
+        (!filters.home || apartment.home) &&
+        (!filters.stars5 || apartment.stars5) &&
+        (!filters.stars4 || apartment.stars4) &&
+        (!filters.stars3 || apartment.stars3) &&
+        (!filters.stars2 || apartment.stars2)
+      );
+    });
+
+    setFilteredApartments(filtered);
+  };
+
+  useEffect(() => {
+    handleFiltering();
+  }, [apartments, filters]);
 
   return (
     <>
-    <div className='strelice'>
-    <div className="levaStrelica unClick" >
-      <FontAwesomeIcon icon={faAngleLeft}  onClick={()=>{
-        if(brojacStr===2){
-          reset
-            brojacLeva = 10;
-            brojacDesna = 20;
-            brojacStr--
-            if(klasaPr=true){
-               leva.classList.remove("unClick"); 
-               klasaPr=false
-            }
-        } else if(brojacStr===1){
-          reset
-            brojacLeva = 0;
-            brojacDesna = 10;
-            leva.classList.add("unClick");
-            desna.classList.remove("unClick")
-            klasaPr=true;
-        } 
-        }}/>
-      </div>
-      <div className="desnaStrelica">
-      <FontAwesomeIcon icon={faAngleRight} onClick={()=>{
-        reset
-        if(brojacStr===1){
-            brojacLeva = 10;
-            brojacDesna = 20;
-            brojacStr++;
-            if(klasaDr=true){
-                desna.classList.remove("unClick")
-                klasaDr=false
-            }
-        } else if(brojacStr===2){
-          reset
-            brojacLeva = 20;
-            brojacDesna = 30;
-            desna.classList.add("unClick");
-            leva.classList.remove("unClick");
-            klasaDr = true;
-        }
-      }}/>
-      </div>
-      </div>
-    <div className='GuestWrapper'>
-    {apartments.slice(brojacLeva,brojacDesna).map((apartment)=>(
-        <div className='apartmentCard'>
-        <img key={apartment.id} src={apartment.url} alt={apartment.title} className='apartmentImg'/>
-        <h4 key={seed}>{apartment.title}</h4>
-        <p>This apartment isperfect for your long waited getaway! It covers every need and lets you focus on your relaxation. It is truly one of a kind experience a click away from you! </p>
-        <button>View More!</button>
+      <div className="strelice">
+        <div className={`levaStrelica ${startIndex === 0 ? "unClick" : ""}`}>
+          <FontAwesomeIcon icon={faAngleLeft} onClick={handleLeftClick} />
         </div>
-    ))}
-    </div>
+        <div
+          className={`desnaStrelica ${
+            startIndex + 10 >= filteredApartments.length ? "unClick" : ""
+          }`}
+        >
+          <FontAwesomeIcon icon={faAngleRight} onClick={handleRightClick} />
+        </div>
+      </div>
+
+      <div className="GuestWrapper">
+        {filteredApartments
+          .slice(startIndex, startIndex + 10)
+          .map((apartment) => (
+            <div className="apartmentCard" key={apartment.id}>
+              <img
+                src={apartment.url}
+                alt={apartment.title}
+                className="apartmentImg"
+              />
+              <h4>{apartment.title}</h4>
+              <p>
+                This apartment is perfect for your long-awaited getaway! It
+                covers every need and lets you focus on your relaxation. It is
+                truly one of a kind experience a click away from you!
+              </p>
+              <button>View More!</button>
+            </div>
+          ))}
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default GuestApp;

@@ -1,14 +1,36 @@
-import {React, useState} from "react";
-import 'bootstrap'
-import 'bootstrap/dist/css/bootstrap.css'
-import { Dropdown } from "react-bootstrap";
-import { DropdownButton } from "react-bootstrap";
+import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import "../FrontPage/SideFilter.css";
-import { act } from "react";
 
-const SideFilter = () => {
+const SideFilter = ({ onFiltersChange }) => {
+  const [action, setAction] = useState("Select a country");
+  const [filters, setFilters] = useState({
+    freeWifi: false,
+    aircon: false,
+    parking: false,
+    pets: false,
+    roomS: false,
+    apartment: false,
+    villa: false,
+    hotel: false,
+    home: false,
+    stars5: false,
+    stars4: false,
+    stars3: false,
+    stars2: false,
+  });
 
-    const [action, setAction] = useState("Select a country");
+  const handleFilterChange = (filterName) => {
+    setFilters({
+      ...filters,
+      [filterName]: !filters[filterName]
+    });
+  };
+
+  const applyFilters = () => {
+    onFiltersChange(filters);
+  };
 
   return (
     <>
@@ -28,64 +50,65 @@ const SideFilter = () => {
           <div className="popularFilter filterWrapper">
             <div className="filter filter1">
               <label htmlFor="freeWifi">Free Wifi</label>
-          <input type="checkbox" name="freeWifi" id="freeWifi" className="checkBox"/>
+              <input type="checkbox" name="freeWifi" id="freeWifi" className="checkBox" onChange={() => handleFilterChange("freeWifi")} />
+            </div>
+            <div className="filter filter2">
+              <label htmlFor="aircon">Air conditioning</label>
+              <input type="checkbox" name="aircon" id="aircon" className="checkBox" onChange={() => handleFilterChange("aircon")} />
+            </div>
+            <div className="filter filter3">
+              <label htmlFor="parking">Parking</label>
+              <input type="checkbox" name="parking" id="parking" className="checkBox" onChange={() => handleFilterChange("parking")} />
+            </div>
+            <div className="filter filter4">
+              <label htmlFor="pets">Pets allowed</label>
+              <input type="checkbox" name="pets" id="pets" className="checkBox" onChange={() => handleFilterChange("pets")} />
+            </div>
+            <div className="filter filter5">
+              <label htmlFor="roomS">Room Service</label>
+              <input type="checkbox" name="roomS" id="roomS" className="checkBox" onChange={() => handleFilterChange("roomS")} />
+            </div>
           </div>
-          <div className="filter filter2">
-          <label htmlFor="aircon">Air conditioning</label>
-          <input type="checkbox" name="aircon" id="aircon" className="checkBox"/>
-          </div>
-          <div className="filter filter3">
-          <label htmlFor="parking">Parking</label>
-          <input type="checkbox" name="parking" id="parking" className="checkBox"/>
-          </div>
-          <div className="filter filter4">
-          <label htmlFor="pets">Pets allowed</label>
-          <input type="checkbox" name="pets" id="pets" className="checkBox"/>
-          </div>
-          <div className="filter filter5">
-          <label htmlFor="roomS">Room Service</label>
-          <input type="checkbox" name="roomS" id="roomS" className="checkBox"/>
-          </div>
-          </div>
-          <h4 className="FilterTitle pTypeTitle">Property Types</h4>
+          <h4 className="pTypeTitle">Property Type</h4>
           <div className="pTypeFilter filterWrapper">
           <div className="filter filter6">
-          <label htmlFor="hotel">Hotels</label>
-          <input type="checkbox" name="hotel" id="hotel" className="checkBox"/>
+              <label htmlFor="apartment">Apartments</label>
+              <input type="checkbox" name="apartment" id="apartment" className="checkBox" onChange={() => handleFilterChange("apartment")} />
+            </div>
+            <div className="filter filter7">
+              <label htmlFor="villa">Villas</label>
+              <input type="checkbox" name="villa" id="villa" className="checkBox" onChange={() => handleFilterChange("villa")} />
+            </div>
+            <div className="filter filter8">
+              <label htmlFor="hotel">Hotels</label>
+              <input type="checkbox" name="hotel" id="hotel" className="checkBox" onChange={() => handleFilterChange("hotel")} />
+            </div>
+            <div className="filter filter9">
+              <label htmlFor="home">Holiday Homes</label>
+              <input type="checkbox" name="home" id="home" className="checkBox" onChange={() => handleFilterChange("home")} />
+            </div>
           </div>
-          <div className="filter filter7">
-          <label htmlFor="apartment">Apartments</label>
-          <input type="checkbox" name="apartment" id="apartment" className="checkBox"/>
-          </div>
-          <div className="filter filter8">
-          <label htmlFor="villa">Villas</label>
-          <input type="checkbox" name="villa" id="villa" className="checkBox"/>
-          </div>
-          <div className="filter filter9">
-          <label htmlFor="holiday">Holiday Homes</label>
-          <input type="checkbox" name="holiday" id="holiday"  className="checkBox"/>
-          </div>
-          </div>
-          <h4 className="FilterTitle pRatingTitle">Property Rating</h4>
+          <h4 className="pRatingTitle">Property Rating</h4>
           <div className="pRatingFilter filterWrapper">
           <div className="filter filter10">
-          <label htmlFor="2star">2 Stars</label>
-          <input type="checkbox" name="2star" id="2star" className="checkBox"/>
-          </div>
-          <div className="filter filter11">
-          <label htmlFor="3star">3 Stars</label>
-          <input type="checkbox" name="3star" id="3star" className="checkBox"/>
-          </div>
-          <div className="filter filter12">
-          <label htmlFor="4star">4 Stars</label>
-          <input type="checkbox" name="4star" id="4star" className="checkBox"/>
-          </div>
-          <div className="filter filter13">
-          <label htmlFor="5star">5 Stars</label>
-          <input type="checkbox" name="5star" id="5star" className="checkBox"/>
-          </div>
+              <label htmlFor="stars5">5 Stars</label>
+              <input type="checkbox" name="stars5" id="stars5" className="checkBox" onChange={() => handleFilterChange("stars5")} />
+            </div>
+            <div className="filter filter11">
+              <label htmlFor="stars4">4 Stars</label>
+              <input type="checkbox" name="stars4" id="stars4" className="checkBox" onChange={() => handleFilterChange("stars4")} />
+            </div>
+            <div className="filter filter12">
+              <label htmlFor="stars3">3 Stars</label>
+              <input type="checkbox" name="stars3" id="stars3" className="checkBox" onChange={() => handleFilterChange("stars3")} />
+            </div>
+            <div className="filter filter13">
+              <label htmlFor="stars2">2 Stars</label>
+              <input type="checkbox" name="stars2" id="stars2" className="checkBox" onChange={() => handleFilterChange("stars2")} />
+            </div>
           </div>
         </div>
+        <button type="submit" className="submit submitFilter" onClick={applyFilters}>Apply Filters</button>
       </div>
     </>
   );
