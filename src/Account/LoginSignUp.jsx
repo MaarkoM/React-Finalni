@@ -28,6 +28,7 @@ const LoginSignUp = () => {
     console.log(action);
     try {
       if (action === 'Login') {
+        console.log(credentials);
         const response = await axios.post('http://localhost:5173/api/login', {
           email: credentials.email,
           password: credentials.password,

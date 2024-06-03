@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import "../FrontPage/GuestApp.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const GuestApp = ({ filters }) => {
   const [apartments, setApartments] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [filteredApartments, setFilteredApartments] = useState([]);
+  // const navigate = useNavigate();
 
   const fetchApartments = () => {
-    fetch("https://mocki.io/v1/c1385134-e705-47f2-8f7e-2409ed535024")
+    fetch("https://mocki.io/v1/3c33edc4-460c-4f09-8b40-41d0a4fd14bd")
       .then((res) => res.json())
       .then((data) => {
         setApartments(data);
@@ -48,7 +50,11 @@ const GuestApp = ({ filters }) => {
         (!filters.stars5 || apartment.stars5) &&
         (!filters.stars4 || apartment.stars4) &&
         (!filters.stars3 || apartment.stars3) &&
-        (!filters.stars2 || apartment.stars2)
+        (!filters.stars2 || apartment.stars2) &&
+        (!filters.Serbia || apartment.Serbia) &&
+        (!filters.Montenegro || apartment.Montenegro ) &&
+        (!filters.Bosnia || apartment.Bosnia) &&
+        (!filters.Romania || apartment.Romania) 
       );
     });
 
@@ -85,12 +91,8 @@ const GuestApp = ({ filters }) => {
                 className="apartmentImg"
               />
               <h4>{apartment.title}</h4>
-              <p>
-                This apartment is perfect for your long-awaited getaway! It
-                covers every need and lets you focus on your relaxation. It is
-                truly one of a kind experience a click away from you!
-              </p>
-              <button>View More!</button>
+              <p>{apartment.description}</p>
+              <Link to={`/Apartment/${apartment.id}`} className="viewMore">View More!</Link>
             </div>
           ))}
       </div>

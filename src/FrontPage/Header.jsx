@@ -5,9 +5,20 @@ import "../FrontPage/Header.css";
 import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Header = () => {
 
-  const [action, setAction] = useState("Guest");
+const Header = ({setAction}) => {
+
+  const [activeButton, setActiveButton] = useState("Guest");
+  let br;
+  const handleGuestClick = () => {
+    setAction("Guest");
+    setActiveButton("Guest");
+  };
+
+  const handleHostClick = () => {
+    setAction("Host");
+    setActiveButton("Host");
+  };
 
   return (
     <>
@@ -17,10 +28,10 @@ const Header = () => {
       </div>
       <div className="linkWrapper">
         <ul className="links">
-          <li className="list"><Link className="link AboutMe">About Me</Link></li>
-          <li className="list"><Link className="link AboutMe">Github</Link></li>
-          <li className="list"><Link className="link AboutMe">LinkedIn</Link></li>
-          <li className="list"><Link className="link AboutMe">Instagram</Link></li>
+          <li className="list"><Link to="AboutUs" className="link AboutUs">About Us</Link></li>
+          <li className="list"><Link to="https://www.instagram.com/mojsilovicmarko__" className="link Instagram">Instagram</Link></li>
+          <li className="list"><Link to="https://www.linkedin.com/in/marko-mojsilovi%C4%87-a204592b2/" className="link LinkedIn">LinkedIn</Link></li>
+          <li className="list"><Link to="https://github.com/MaarkoM/MarkoBoban-Projekat.git" className="link Github">Other Project</Link></li>
         </ul>
       </div>
       <div className="profileIconContainer">
@@ -28,16 +39,28 @@ const Header = () => {
       </div>
     </div>
     <div className="switchContainer">
-      {action==="Guest"?<div className="guest">
-        <button className="displayBtn">Guest</button>
-      </div>:<div className="guest">
-        <button className="standbyBtn" onClick={()=>{setAction("Guest")}}>Guest</button>
-      </div>}
-      {action==="Host"?<div className="host ">
-        <button className="displayBtn">Host</button>
-      </div>:<div className="host">
-        <button className="standbyBtn" onClick={()=>{setAction("Host")}}>Host</button>
-      </div>}
+    {activeButton === "Guest" ? (
+          <div className="guest">
+            <button className="displayBtn">Guest</button>
+          </div>
+        ) : (
+          <div className="guest">
+            <button className="standbyBtn" onClick={handleGuestClick}>
+              Guest
+            </button>
+          </div>
+        )}
+        {activeButton === "Host" ? (
+          <div className="host ">
+            <button className="displayBtn">Host</button>
+          </div>
+        ) : (
+          <div className="host">
+            <button className="standbyBtn" onClick={handleHostClick}>
+              Host
+            </button>
+          </div>
+        )}
     </div>
     </>
   );

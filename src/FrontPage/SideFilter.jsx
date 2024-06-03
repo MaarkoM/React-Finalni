@@ -5,6 +5,7 @@ import "../FrontPage/SideFilter.css";
 
 const SideFilter = ({ onFiltersChange }) => {
   const [action, setAction] = useState("Select a country");
+  const [selectedCountry, setSelectedCountry] = useState(null);
   const [filters, setFilters] = useState({
     freeWifi: false,
     aircon: false,
@@ -19,19 +20,43 @@ const SideFilter = ({ onFiltersChange }) => {
     stars4: false,
     stars3: false,
     stars2: false,
+    Serbia: false,
+    Montenegro: false,
+    Bosnia: false,
+    Romania: false
   });
 
   const handleFilterChange = (filterName) => {
+    filterName
     setFilters({
       ...filters,
       [filterName]: !filters[filterName]
     });
   };
 
-  const applyFilters = () => {
-    onFiltersChange(filters);
+  const handleCountrySelect = (country) => {
+    if (country === "all") {
+      setSelectedCountry(null);
+      setAction("All Countries");
+    } else {
+      setSelectedCountry(country.key);
+      setAction(country.name);
+    }
   };
 
+  const applyFilters = () => {
+    const updatedFilters = {
+      ...filters,
+      Serbia: false,
+      Montenegro: false,
+      Bosnia: false,
+      Romania: false,
+      ...(selectedCountry && { [selectedCountry]: true })
+    };
+
+    setFilters(updatedFilters);
+    onFiltersChange(updatedFilters);
+  };
   return (
     <>
       <div className="filterContainer">
@@ -39,10 +64,22 @@ const SideFilter = ({ onFiltersChange }) => {
         <div className="country">
           <h4>Countries</h4>
           <DropdownButton id="dropdown-basic-button" title={action}>
-            <Dropdown.Item href="#/action-1" onClick={()=>{setAction("Serbia - Belgrade")}}>Serbia - Belgrade</Dropdown.Item>
-            <Dropdown.Item href="#/action-2" onClick={()=>{setAction("Montenegro - Podgorica")}}>Montenegro - Podgorica</Dropdown.Item>
-            <Dropdown.Item href="#/action-3" onClick={()=>{setAction("Bosnia - Sarajevo")}}>Bosnia - Sarajevo</Dropdown.Item>
-            <Dropdown.Item href="#/action-4" onClick={()=>{setAction("Romania - Bucharest")}}>Romania - Bucharest</Dropdown.Item>
+          <Dropdown.Item onClick={() => handleCountrySelect("all")}>
+              All Countries
+            </Dropdown.Item>
+            {[
+              { name: "Serbia - Belgrade", key: "Serbia" },
+              { name: "Montenegro - Podgorica", key: "Montenegro" },
+              { name: "Bosnia - Sarajevo", key: "Bosnia" },
+              { name: "Romania - Bucharest", key: "Romania" }
+            ].map((country, index) => (
+              <Dropdown.Item
+                key={index}
+                onClick={() => handleCountrySelect(country)}
+              >
+                {country.name}
+              </Dropdown.Item>
+            ))}
           </DropdownButton>
         </div>
         <div className="AllFilter">

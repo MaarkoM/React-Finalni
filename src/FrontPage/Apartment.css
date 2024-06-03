@@ -1,0 +1,109 @@
+.profileIconContainer{
+    margin-right: 2px;
+}
+.apartmentDetail {
+    display: flex;
+    max-width: 1700px;
+    height: 700px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 1.5rem;
+  }
+  
+  .apartmentDetail:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .signleApartmentImg {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .signleApartmentContent {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .signleApartmentTitle{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .signleApartmentDescription {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  
+  .signleApartmentFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .signleApartmentFeatures li {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+  }
+  
+  .signleApartmentFeatures li:first-child {
+    border-top: none;
+  }
+  .navigationButtons {
+    display: flex;
+    align-items: center;
+  }
+  .left{
+    margin-right: 1rem;
+  }
+  .right{
+    margin-left: 1rem;
+  }
+  
+  .navigationButtons button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 200ms ease-in;
+  }
+  
+  .closeButton {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 13rem;
+    right: 10rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .closeButton:hover {
+    color: purple;
+  }
+  
+  .navigationButtons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+.navigationButtons button:hover{
+    transform: scale(1.1);
+    color: skyblue;
+}

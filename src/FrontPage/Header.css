@@ -26,6 +26,7 @@
     position: absolute;
     right: 4rem;
     color: white;
+    transition: 200ms ease-in;
 }
 .profileIconContainer{
     padding: 4rem 7rem 0 0;
@@ -81,4 +82,10 @@
 .unClick{
     pointer-events: none;
     opacity: 0.5;
+}
+.profileIcon:hover{
+    border-radius: 50%; 
+    color: #2A629A;
+    background-color: white;
+     transform: scale(1.1);
 }

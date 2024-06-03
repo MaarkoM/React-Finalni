@@ -35,7 +35,7 @@
 .apartmentCard p{
     padding: 1rem;
 }
-.apartmentCard button{
+.viewMore{
     padding: 1rem;
     font-family: inherit;
     font-weight: bold;
@@ -45,11 +45,13 @@
     background: transparent;
     border-radius: 10px;
     transition:200ms ease-in;
+    text-decoration: none;
+    text-align: center;
 }
 .apartmentCard:hover{
     transform: scale(1.02);
 }
-.apartmentCard button:hover{
+.viewMore:hover{
     border: 2px solid purple;
     color: purple;
 }
@@ -71,4 +73,8 @@
     top: -69rem;
     z-index: 1;
     cursor: pointer;
+}
+.viewMoreLink{
+    text-decoration: none;
+    color: inherit;
 }

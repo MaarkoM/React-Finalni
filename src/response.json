@@ -19,7 +19,12 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": true,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Escape to a tranquil retreat at Markos Cozy Oasis. This charming apartment offers a serene environment perfect for couples looking to unwind and reconnect. With modern amenities and a cozy ambiance, it's your ideal home away from home in Serbia."
   },
   {
     "id": 2,
@@ -41,7 +46,12 @@
     "stars5": false,
     "stars4": true,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": true,
+    "description": "Indulge in a fun-filled stay at Stevans Apartment with Darts. This spacious villa in Romania is perfect for families or groups seeking entertainment. Enjoy a game of darts or relax in the luxurious surroundings of your private villa."
   },
   {
     "id": 3,
@@ -63,7 +73,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": true,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": true,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Immerse yourself in the beauty of Montenegro with a stay at Greece Experience on Jadran. Located in a picturesque setting, this hotel offers stunning views and luxurious amenities for a memorable vacation."
   },
   {
     "id": 4,
@@ -85,7 +100,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": false,
-    "stars2": true
+    "stars2": true,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": true,
+    "Romania": false,
+    "description": "Elevate your stay in Bosnia with a dreamy escape to this luxurious penthouse. With breathtaking views and top-notch amenities, this penthouse is perfect for discerning travelers seeking a lavish retreat."
   },
   {
     "id": 5,
@@ -107,7 +127,12 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": true,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Discover romance and relaxation at Lovers Nest, nestled in the heart of Serbia. This intimate hotel offers cozy accommodations and thoughtful touches for a memorable getaway with your loved one."
   },
   {
     "id": 6,
@@ -129,7 +154,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": false,
-    "stars2": true
+    "stars2": true,
+    "Serbia": true,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Embark on an adventure at Super Mario Hangout Spot, a unique home in Serbia inspired by the iconic video game. With spacious rooms and fun-themed decor, it's the ultimate retreat for gamers and families alike."
   },
   {
     "id": 7,
@@ -151,7 +181,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": true,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": true,
+    "description": "Experience the charm of Romania at Ljubas Trumpet House, a cozy apartment in a historic building. Enjoy the vibrant atmosphere of the city and explore nearby attractions from this centrally located accommodation."
   },
   {
     "id": 8,
@@ -173,7 +208,12 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": true,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Escape the heat and unwind in this cozy igloo-style apartment in Montenegro. With its unique design and tranquil surroundings, it's the perfect place to cool off and relax during the summer months."
   },
   {
     "id": 9,
@@ -195,7 +235,12 @@
     "stars5": false,
     "stars4": true,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": true,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Transport yourself to paradise at Under the Palm Leaf, a luxurious villa in Montenegro. Surrounded by lush greenery and offering top-notch amenities, it's the ultimate tropical getaway."
   },
   {
     "id": 10,
@@ -217,7 +262,12 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": true,
+    "Romania": false,
+    "description": "Discover the beauty of Bosnia with a stay at Meet the Balkans, a charming hotel in the heart of the country. Immerse yourself in local culture and explore the rich history and natural wonders of the region."
   },
   {
     "id": 11,
@@ -239,7 +289,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": false,
-    "stars2": true
+    "stars2": true,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": true,
+    "Romania": false,
+    "description": "Experience true hospitality at Red Star, a cozy apartment in the heart of Bosnia. Perfect for solo travelers or couples, this charming retreat offers comfort and convenience at an affordable price."
   },
   {
     "id": 12,
@@ -261,7 +316,12 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": true,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Immerse yourself in the vibrant nightlife of Serbia at Night Life Crib, a stylish villa perfect for partygoers. With spacious accommodations and modern amenities, it's the ultimate destination for those seeking excitement and entertainment."
   },
   {
     "id": 13,
@@ -283,7 +343,12 @@
     "stars5": false,
     "stars4": true,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": true,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Step through the Golden Door and into a world of luxury at this exquisite hotel in Montenegro. With its elegant design and impeccable service, it's the perfect place to relax and rejuvenate during your stay."
   },
   {
     "id": 14,
@@ -305,7 +370,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": true,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": true,
+    "description": "Experience the future of hospitality at Peek into the Future, a futuristic apartment in Romania. With its innovative design and cutting-edge technology, it offers a glimpse into what the future holds for travel accommodations."
   },
   {
     "id": 15,
@@ -322,12 +392,17 @@
     "roomS": true,
     "apartment": false,
     "villa": false,
-    "hotel": false, 
+    "hotel": false,
     "home": true,
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": true,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Find serenity at Calm Clam, nestled in a peaceful area of Montenegro. With its tranquil surroundings and comfortable accommodations, it's the perfect retreat for those seeking relaxation and rejuvenation."
   },
   {
     "id": 16,
@@ -349,29 +424,35 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": true,
+    "Romania": false,
+    "description": "Experience luxury like never before at DJidji bIdji, a lavish villa in Bosnia. With its expansive layout and opulent furnishings, it's the perfect destination for those seeking an indulgent getaway."
   },
   {
     "id": 17,
     "title": "Experimental Bubble",
-    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMrPX6olqeYAfgt-kjY4kpkJYCssCKP_czVG59TN1pwg&s",
-    "country": "Romania",
-    "freeWifi": true,
-    "aircon": true,
-    "max-people": 1,
+    "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMrPX6olqeYAfgt-kjY4kpkJYCssCKP_czVG59TN1pw",
     "rating": "***",
     "price": 40,
     "parking": true,
     "pets": false,
-    "roomS": false,
+    "roomS": true,
     "apartment": true,
     "villa": false,
     "hotel": false,
     "home": false,
     "stars5": false,
-    "stars4": false,
+    "stars4": true,
     "stars3": false,
-    "stars2": true
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": true,
+    "description": "Step into the future of accommodations at Experimental Bubble, an innovative apartment in Romania. With its unique design and futuristic amenities, it offers a truly one-of-a-kind experience for adventurous travelers."
   },
   {
     "id": 18,
@@ -393,7 +474,12 @@
     "stars5": true,
     "stars4": false,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": true,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Escape to the enchanting Over the Moon Getaway, a luxurious villa in Serbia offering breathtaking views and unparalleled comfort. With its spacious accommodations and serene surroundings, it's the perfect destination for a dreamy vacation."
   },
   {
     "id": 19,
@@ -415,7 +501,12 @@
     "stars5": false,
     "stars4": true,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": true,
+    "Romania": false,
+    "description": "Experience a unique stay at Bunker, an unconventional apartment in Bosnia. Nestled amidst nature, this cozy retreat offers a blend of comfort and adventure for travelers seeking something out of the ordinary."
   },
   {
     "id": 20,
@@ -437,7 +528,12 @@
     "stars5": false,
     "stars4": false,
     "stars3": false,
-    "stars2": true
+    "stars2": true,
+    "Serbia": false,
+    "Montenegro": false,
+    "Bosnia": false,
+    "Romania": true,
+    "description": "Discover the charm of Andrews Lighthouse, a quaint retreat in Romania offering stunning views of the coastline. With its cozy interiors and romantic ambiance, it's the perfect spot for a seaside escape."
   },
   {
     "id": 21,
@@ -459,6 +555,11 @@
     "stars5": false,
     "stars4": true,
     "stars3": false,
-    "stars2": false
+    "stars2": false,
+    "Serbia": false,
+    "Montenegro": true,
+    "Bosnia": false,
+    "Romania": false,
+    "description": "Indulge in the ultimate Cocktail Afterparty experience at this stylish apartment in Montenegro. With its trendy decor and vibrant atmosphere, it's the perfect place to unwind after a day of exploring the local nightlife."
   }
 ]
