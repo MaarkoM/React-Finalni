@@ -8,7 +8,6 @@ const GuestApp = ({ filters }) => {
   const [apartments, setApartments] = useState([]);
   const [startIndex, setStartIndex] = useState(0);
   const [filteredApartments, setFilteredApartments] = useState([]);
-  // const navigate = useNavigate();
 
   const fetchApartments = () => {
     fetch("https://mocki.io/v1/3c33edc4-460c-4f09-8b40-41d0a4fd14bd")

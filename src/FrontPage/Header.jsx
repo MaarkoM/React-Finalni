@@ -6,7 +6,7 @@ import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 
-const Header = ({setAction}) => {
+const Header = ({setAction, username}) => {
 
   const [activeButton, setActiveButton] = useState("Guest");
   let br;
@@ -28,16 +28,17 @@ const Header = ({setAction}) => {
       </div>
       <div className="linkWrapper">
         <ul className="links">
-          <li className="list"><Link to="AboutUs" className="link AboutUs">About Us</Link></li>
+          <li className="list"><Link to="/AboutUs" className="link AboutUs">About Us</Link></li>
           <li className="list"><Link to="https://www.instagram.com/mojsilovicmarko__" className="link Instagram">Instagram</Link></li>
           <li className="list"><Link to="https://www.linkedin.com/in/marko-mojsilovi%C4%87-a204592b2/" className="link LinkedIn">LinkedIn</Link></li>
           <li className="list"><Link to="https://github.com/MaarkoM/MarkoBoban-Projekat.git" className="link Github">Other Project</Link></li>
         </ul>
       </div>
       <div className="profileIconContainer">
-      <Link to="LoginSignUp"><FontAwesomeIcon icon={faCircleUser} className="profileIcon"></FontAwesomeIcon></Link>
+      <Link to="/LogOff"><FontAwesomeIcon icon={faCircleUser} className="profileIcon"></FontAwesomeIcon></Link>
       </div>
     </div>
+    {username && <div className="greeting">Hi, {username}!</div>}
     <div className="switchContainer">
     {activeButton === "Guest" ? (
           <div className="guest">

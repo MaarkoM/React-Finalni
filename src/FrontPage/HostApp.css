@@ -21,6 +21,7 @@
     height: 40vh;
     border: 2px solid black;
     cursor: pointer;
+    gap: 1rem;
 }
 .hostApartmentDetails{
     text-align: center;
@@ -48,4 +49,24 @@
     display: flex;
     justify-content: flex-start;
     padding: 1rem;
+}
+.hostinput{
+    border: none;
+    -webkit-appearance: none;
+    -ms-apperance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 150px;
+    outline: none;
+    transition: 200ms ease-in;
+}
+.hostinput:focus::placeholder{
+    color: transparent;
+}
+.hostinput::placeholder{
+    color: #222;
+    transition: color 0.3 ease;
 }

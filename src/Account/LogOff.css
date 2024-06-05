@@ -1,0 +1,63 @@
+.userIcon img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 1px solid #4c00b4;
+}
+.userWrap{
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+.emailWrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3rem;
+    background: #eaeaea;
+    justify-content: center;
+    height: 5rem;
+    width: 25rem;
+    border-radius: 10px;
+    transition: 200ms ease-in;
+}
+.emailWrap:hover{
+    transform: scale(1.02);
+}
+.iconEmail{
+    font-size: 1.25rem;
+}
+.userEmail{
+    padding-left: 1rem;
+    font-size: 1.25rem;
+    text-decoration: underline;
+}
+.LogOffBtnWrap{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+.logOffBack{
+    position: absolute;
+    top: 9rem;
+    left: 43rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.logOffDisabled{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #676767;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.logOffLogIn{
+    text-decoration: none;
+}

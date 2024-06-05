@@ -18,7 +18,7 @@ const AboutUs = () => {
         <div className="linkWrapper">
           <ul className="links">
             <li className="list">
-              <Link to="/" className="link Home">
+              <Link to="/Home" className="link Home">
                 Home
               </Link>
             </li>
@@ -97,7 +97,7 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="AboutFooter">
-        <Link to="/" className="FooterLink"><p className="FooterText">Embark on a journey with us, and let ApartRelax Corporation redefine the way you experience the world.</p></Link>
+        <Link to="/Home" className="FooterLink"><p className="FooterText">Embark on a journey with us, and let ApartRelax Corporation redefine the way you experience the world.</p></Link>
       </div>
     </>
   );

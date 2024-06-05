@@ -77,6 +77,7 @@ const HostApp = () => {
                 placeholder="Image URL"
                 value={newApartment.url}
                 onChange={handleChange}
+                className="hostUrl hostinput"
               />
               <input
                 type="text"
@@ -84,12 +85,14 @@ const HostApp = () => {
                 placeholder="Title"
                 value={newApartment.title}
                 onChange={handleChange}
+                className="hostTitle hostinput"
               />
               <textarea
                 name="description"
                 placeholder="Description"
                 value={newApartment.description}
                 onChange={handleChange}
+                className="hostDesc hostinput"
               />
               <div className="buttonGroup">
                 <button className="backBtn" onClick={toggleForm}>

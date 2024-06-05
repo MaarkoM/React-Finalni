@@ -56,7 +56,6 @@
     padding: 8px 0;
     border-top: 1px solid #eee;
     display: flex;
-    justify-content: space-between;
     color: #333;
   }
   
@@ -106,4 +105,13 @@
 .navigationButtons button:hover{
     transform: scale(1.1);
     color: skyblue;
+}
+.phoneNum{
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.copy{
+  position: absolute;
+  right: 39.5rem;
+  bottom: 11rem;
 }
