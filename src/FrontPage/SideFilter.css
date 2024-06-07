@@ -66,3 +66,91 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1700px) {
+    .filterContainer{
+        width: 17rem;
+        margin: 0.4rem;
+    }
+    .checkBox{
+        left: 13rem;
+    }
+    .submitFilter{
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .filterContainer{
+        width: 16rem;
+    }
+    .checkBox{
+        left: 13rem;
+    }
+    .submitFilter{
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .filterContainer{
+        width: 12rem;
+    }
+    .checkBox{
+        left: 9rem;
+    }
+    .AllFilter h4{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .submitFilter{
+        margin-left: 0.8rem;
+        width: 160px;
+        height: 40px;
+        border-radius: 50px;
+        font-size: 15px;
+        margin-top: 1.2rem;
+    }
+    .filterWrapper{
+        gap: 1rem;
+        padding: 1rem 0 0 1rem;
+        font-size: 0.9rem;
+    }
+    .filterContainer{
+        height: 55.1rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .filterContainer{
+        width: 10rem;
+    }
+    .checkBox{
+        left: 8rem;
+    }
+    .submitFilter{
+        margin-left: -0.1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .filterContainer{
+        width: 8rem;
+    }
+    .checkBox{
+        left: 6rem;
+    }
+    .submitFilter{
+        margin-left: 0.8rem;
+        width: 100px;
+    }
+    .filterWrapper{
+        gap: 1rem;
+        padding: 1rem 0 0 0.1rem;
+        font-size: 0.8rem;
+    }
+    #dropdown-basic-button{
+        margin-bottom: 1rem;
+        font-size: 0.5rem;
+    }
+}

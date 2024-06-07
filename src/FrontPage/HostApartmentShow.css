@@ -1,0 +1,56 @@
+.hostApartmentTitle{
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+.hostApartmentContent{
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hostApartmentDescription{
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #666;
+}
+.hostApartmentImg{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.hostApartmentFeatures{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.phoneNum{
+    margin-left: 1rem;
+}
+.hostDetail{
+    display: flex;
+    max-width: 1700px;
+    height: 700px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    padding: 1.5rem;
+}
+.profileIconContainer{
+    margin-right: 2px;
+}
+.hostApartmentFeatures li {
+    font-size: 1.2rem;
+    padding: 8px 0;
+    border-top: 1px solid #eee;
+    display: flex;
+    color: #333;
+}
+.hostApartmentFeatures li:first-child {
+    border-top: none;
+  }

@@ -1,40 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faArrowLeft, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faTrash } from "@fortawesome/free-solid-svg-icons";
 import "./HostApp.css";
+import { Link, useNavigate } from "react-router-dom";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-const HostApp = () => {
-  const [apartments, setApartments] = useState([]);
-  const [newApartment, setNewApartment] = useState({
-    url: "",
-    title: "",
-    description: "",
-  });
+const HostApp = ({ apartments, setApartments }) => {
   const [showForm, setShowForm] = useState(false);
+  const navigate = useNavigate();
 
-  const handleAddApartment = () => {
-    if (!newApartment.url || !newApartment.description) {
-      alert("Please fill in all fields");
-      return;
-    }
-
-    setApartments([...apartments, newApartment]);
-
-    setNewApartment({
-      url: "",
-      title: "",
-      description: "",
-    });
-
-    setShowForm(false);
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setNewApartment({
-      ...newApartment,
-      [name]: value,
-    });
+  const toggleForm = () => {
+    setShowForm(!showForm);
   };
 
   const handleRemoveApartment = (index) => {
@@ -42,74 +18,67 @@ const HostApp = () => {
     setApartments(updatedApartments);
   };
 
-  const toggleForm = () => {
-    setShowForm(!showForm);
-    if (!showForm) {
-      setNewApartment({
-        url: "",
-        title:"",
-        description: "",
-      });
-    }
+  const handleViewMore = () => {
+    navigate("/HostApartmentShow");
   };
+const obj = {};
+  
+useEffect(() => {
+    
+    if(apartments){
+      console.log(apartments[0]);
+      console.log(apartments.length);
+    }
+  }, [apartments]);
+
+
+  if(apartments){
+    apartments.forEach((value,index)=>obj[index] = value)
+      console.log(obj);
+      console.log(obj[0]);
+  }
+
+  
 
   return (
     <>
       <div className="hostWrap">
-        {apartments.map((apartment, index) => (
-          <div key={index} className="hostApartment">
-            <div className="hostApartmentDetails">
-            <img src={apartment.url} alt={apartment.description} className="hostImg"/>
-            <h4 className="hostTitle">{apartment.title}</h4>
-            <p className="hostDescription">{apartment.description}</p>
-            <div className="removeWrap">
-                <FontAwesomeIcon icon={faTrash} className="removeBtn" onClick={() => handleRemoveApartment(index)}/>
-            </div>
-            </div>
-          </div>
-        ))}
-        <div className={`hostApartment addApartment ${showForm ? "active" : ""}`}>
-          {showForm ? (
+        {apartments && apartments.length > 0  ?  (
+          //  Object.keys(obj).map((apartment, index) => (
             <>
-              <input
-                type="text"
-                name="url"
-                placeholder="Image URL"
-                value={newApartment.url}
-                onChange={handleChange}
-                className="hostUrl hostinput"
-              />
-              <input
-                type="text"
-                name="title"
-                placeholder="Title"
-                value={newApartment.title}
-                onChange={handleChange}
-                className="hostTitle hostinput"
-              />
-              <textarea
-                name="description"
-                placeholder="Description"
-                value={newApartment.description}
-                onChange={handleChange}
-                className="hostDesc hostinput"
-              />
-              <div className="buttonGroup">
-                <button className="backBtn" onClick={toggleForm}>
-                  <FontAwesomeIcon icon={faArrowLeft} />
-                </button>
-                <button type="submit" className="submitApartment" onClick={handleAddApartment}>
-                  Submit
-                </button>
+            <div className="hostApartment">
+              <div className="hostApartmentDetails">
+                <img src={obj[0]} alt={obj[2]} className="hostImg" />
+                <h4 className="hostTitle">{obj[1]}</h4>
+                <p className="hostDescription">{obj[2]}</p>
+                <div className="removeWrap">
+                  <FontAwesomeIcon icon={faTrash} className="removeBtn" onClick={() => handleRemoveApartment(index)} />
+                  <div className="viewMore" onClick={handleViewMore}>
+                    <FontAwesomeIcon icon={faEye} className="viewMoreIcon" />
+                    View More
+                  </div>
+                </div>
               </div>
-            </>
-          ) : (
-            <div className="toggleFormBtn" onClick={toggleForm}>
-              <FontAwesomeIcon icon={faPlus} className="addBtn"/>
             </div>
-          )}
+            <Link to="/HostApartment">
+            <div className={`hostApartment addApartment ${showForm ? "active" : ""}`} onClick={toggleForm}>
+              <div className="toggleFormBtn">
+                <FontAwesomeIcon icon={faPlus} className="addBtn" />
+              </div>
+            </div>
+          </Link>
+          </>
+          )
+          
+        : <Link to="/HostApartment">
+        <div className={`hostApartment addApartment ${showForm ? "active" : ""}`} onClick={toggleForm}>
+          <div className="toggleFormBtn">
+            <FontAwesomeIcon icon={faPlus} className="addBtn" />
+          </div>
         </div>
+      </Link>}
       </div>
+      
     </>
   );
 };

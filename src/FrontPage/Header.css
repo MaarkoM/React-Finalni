@@ -89,3 +89,206 @@
     background-color: white;
      transform: scale(1.1);
 }
+
+@media only screen and (max-width: 1700px) {
+    .switchContainer{
+        height: 4rem;
+        padding: 1rem 35rem 0 35rem;
+    }
+    .logo{
+        padding-left: 5rem;
+    }
+    .linkWrapper{
+        top: 4rem;
+        right: 25rem;
+        overflow: hidden;
+    }
+    .profileIcon{
+        right: 12rem;
+    }
+    .headerContainer{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .switchContainer{
+        height: 4rem;
+        padding: 1rem 35rem 0 35rem;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .links{
+        font-size: 1.1rem;
+    }
+    .logo img{
+        width: 20rem;
+        height: 9rem;
+    }
+    .logo{
+        padding-left: 4rem;
+        padding-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .switchContainer{
+        height: 4rem;
+        padding: 1rem 28rem 0 37rem;
+    }
+    .guest button{
+        padding: 0.6rem 2.5rem 0.6rem 2.5rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition:200ms ease-in;
+    }
+    .host button{
+        padding: 0.6rem 2.5rem 0.6rem 2.5rem;
+        border-radius: 30px;
+        cursor: pointer;
+        transition:200ms ease-in;
+    }
+    .profileIcon{
+        right: 5rem;
+    }
+    .linkWrapper{
+        top: 4rem;
+        right: 15rem;
+        overflow: hidden;
+    } 
+}
+
+@media only screen and (max-width: 1235px) {
+        .switchContainer{
+            height: 4rem;
+            padding: 0.7rem 20rem 0 30rem;
+        }
+}
+
+@media only screen and (max-width: 1170px) {
+    .linkWrapper{
+        top: 4rem;
+        right: 10rem;
+        overflow: hidden;
+    }
+    .logo img{
+        width: 18rem;
+        height: 7rem;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .switchContainer{
+        height: 4rem;
+        padding: 0.7rem 15rem 0 27rem;
+    }
+    .linkWrapper{
+        right: 8rem;
+    }
+    .links{
+        font-size: 1rem;
+    }
+    .profileIcon{
+        right: 3rem;
+    }
+    .logo{
+        padding-left: 3rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .switchContainer{
+        height: 4rem;
+        padding: 0.7rem 16rem 0 22rem;
+    }
+    .guest button{
+        padding: 0.4rem 2.2rem 0.4rem 2.2rem;
+        font-size: 0.9rem;
+    }
+    .host button{
+        padding: 0.4rem 2.2rem 0.4rem 2.2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .switchContainer{
+        height: 4rem;
+        padding: 0.7rem 12rem 0 18rem;
+    }
+    .linkWrapper{
+        top: 7rem;
+        right: 5rem;
+
+    }
+    .logo{
+        padding-left: 15rem;
+        margin-top: -1rem;
+    }
+    .profileIcon{
+        right: 6rem;
+        top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .switchContainer{
+        height: 3rem;
+        padding: 0.7rem 5rem 0 6rem;
+    }
+    .logo{
+        padding-left: 3rem;
+    }
+    .links{
+        font-size: 0.6rem;
+        gap: 3rem;
+    }
+    .linkWrapper{
+        top: 7rem;
+        right: 2rem;
+
+    }
+    .profileIconContainer{
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .logo{
+        padding-left: 1rem;
+    }
+    .profileIcon{
+        right: 3rem;
+        top: 2rem;
+    }
+    .linkWrapper{
+        right: 0.7rem;
+
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .GuestWrapper{
+        left: 8.5rem;
+        max-width: 80%;
+        grid-template-columns: 1fr;
+    }
+    .desnaStrelica{
+        left: 17.5rem;
+    }
+    .levaStrelica{
+        left: 3rem;
+    }
+    .switchContainer{
+        height: 3rem;
+        padding: 0.7rem 5rem 0 4rem;
+    }
+    .logo{
+        padding-left: 0;
+    }
+    .profileIcon{
+        right: 1rem;
+        top: 2rem;
+    }
+}

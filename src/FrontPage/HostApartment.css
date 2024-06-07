@@ -1,0 +1,22 @@
+.hostFormWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+
+}
+.hostApartmentDetail{
+    justify-content: center;
+}
+.hostForm{
+    width: 30rem;
+    height: 70rem;
+}
+.createApartmentTitle{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.4rem;
+}
+/* .hostSubmitApartment{
+    margin-left: 4rem;
+} */

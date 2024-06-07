@@ -123,9 +123,9 @@ const handleBackToLogin = () => {
   setResetEmail('');
 };
     return (
-      <div className='wrapper'>
-        <div className='container'>
-          <div className='header'>
+      <div className='wrapper logwrap'>
+        <div className='container logcontainer'>
+          <div className='header logheader'>
             <Link to="/Home" className='backToHome'><FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
             </Link>
             <div className='text'>{isResettingPassword ? 'Reset Password' : action}</div>

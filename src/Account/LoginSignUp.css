@@ -117,7 +117,8 @@
 
 .backToHome{
   position: absolute;
-  left: 43rem;
+  /* left: 43rem; */
+  left: 37%;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -125,4 +126,130 @@
 .resetMessage{
   margin-left: 9rem;
   color: red;
+}
+
+@media only screen and (max-width: 1600px) {
+  .logwrap{
+    padding-top: 22px;
+     height: 100vh;
+     overflow: hidden;
+  }
+  .container{
+    width: 500px;
+  }
+  .backToHome{
+    margin-left: -11rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .container{
+    margin-bottom: 1.5rem;
+  }
+  .wrapper{
+    height: 100vh;
+  }
+  .backToHome{
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .input{
+    width: 370px;
+}
+}
+
+/* @media only screen and (max-width: 768px) {
+  .backToHome{
+    margin-left: -20rem;
+  }
+} */
+
+@media only screen and (max-width: 768px) {
+  .backToHome{
+    margin-left: -27rem;
+  }
+  .accBtn {
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    background: #4c00b4;
+    border-radius: 50px;
+    font-size: 16px;
+  }
+  .input input {
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+  }
+  .input{
+    width: 370px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+    margin-left: 3rem;
+  }
+  .toggleContainer {
+    margin-left: 2.5rem;
+  }
+  .header{
+    margin-left: -0.4rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .backToHome{
+    margin-left: -28rem;
+  }
+  .input input {
+    height: 50px;
+    width: 200px;
+    font-size: 16px;
+  }
+  .input{
+    width: 300px;
+    height: 80px;
+    background: #eaeaea;
+    border-radius: 6px;
+    margin-left: 3rem;
+  }
+  .toggleContainer {
+    margin-left: 0.2rem;
+  }
+  .header{
+    margin-left: -2.5rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .backToHome{
+    margin-left: -28rem;
+  }
+  .header{
+    margin-left: -3.5rem;
+  }
+  .input{
+    width: 300px;
+    height: 80px;
+    margin-left: 2rem;
+  }
+  .toggleContainer {
+    margin-left: -1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .toggleContainer {
+    flex-direction: column;
+    margin-left: 3.5rem;
+  }
+  .input{
+    width: 250px;
+    height: 60px;
+    margin-left: 2rem;
+  }
+  .header{
+    margin-left: -5rem;
+  }
 }

@@ -52,3 +52,74 @@
     border: 1px solid lightblue;
     transform: scale(1.02);
 }
+
+@media only screen and (max-width: 1440px) {
+    .text1{
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .hero{
+        width: 45rem;
+        height: 50vh;
+    }
+    .textWrap1{
+        width: 90%;
+        height: 100%;
+        border: 1px solid white;
+        border-radius: 30px;
+        padding: 1.5rem;
+        transition: 300ms ease-out;
+    }
+    .heroWrap1{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .hero{
+        border-radius: 30px;
+        width: 30rem;
+        height: 30vh;
+        box-shadow: 10px 10px 5px lightblue;
+    }  
+    .FooterText{
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .text1{
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+    .hero{
+        border-radius: 30px;
+        width: 20rem;
+        height: 20vh;
+        box-shadow: 10px 10px 5px lightblue;
+    }
+    .heroWrap1{
+    height: auto;
+    padding: 1rem;
+}
+.FooterText{
+    font-size: 0.9rem;
+}
+.textWrap1{
+    padding: 0.5rem;
+}
+}
+
+@media only screen and (max-width: 425px) {
+    .heroWrap1{
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .hero{
+        width: 18rem;
+        height: 18vh;
+    }
+}

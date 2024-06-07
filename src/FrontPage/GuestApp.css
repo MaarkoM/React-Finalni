@@ -78,3 +78,153 @@
     text-decoration: none;
     color: inherit;
 }
+
+@media only screen and (max-width: 1700px) {
+    .GuestWrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        left: 18.8rem;
+        max-width: 80%;
+    }
+    .desnaStrelica{
+        left: 90.1rem;
+    }
+    .levaStrelica{
+        left: 85.1rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .GuestWrapper{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        left: 18rem;
+        max-width: 80%;
+    }
+    .desnaStrelica{
+        left: 90.1rem;
+    }
+    .levaStrelica{
+        left: 85.1rem;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .desnaStrelica{
+        left: 78rem;
+    }
+    .levaStrelica{
+        left: 73rem;
+    }
+}
+
+@media only screen and (max-width: 1450px) {
+    .desnaStrelica{
+        left: 75rem;
+    }
+    .levaStrelica{
+        left: 70rem;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+    .GuestWrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .desnaStrelica{
+        left: 65rem;
+    }
+    .levaStrelica{
+        left: 60rem;
+    }
+}
+
+@media only screen and (max-width: 1085px) {
+    .desnaStrelica{
+        left: 60rem;
+    }
+    .levaStrelica{
+        left: 55rem;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .desnaStrelica{
+        left: 60rem;
+        top: -68rem;
+    }
+    .levaStrelica{
+        left: 55rem;
+        top: -68rem;
+    }
+    .strelice{
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .GuestWrapper{
+        grid-template-columns: 1fr 1fr;
+    }
+    .desnaStrelica{
+        left: 55rem;
+        top: -58rem;
+    }
+    .levaStrelica{
+        left: 50rem;
+        top: -58rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .desnaStrelica{
+        left: 45rem;
+    }
+    .levaStrelica{
+        left: 40rem;
+    }
+    .GuestWrapper{
+        left: 13rem;
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .desnaStrelica{
+        left: 21.5rem;
+    }
+    .levaStrelica{
+        left: 5rem;
+    }
+    .GuestWrapper{
+        left: 13rem;
+        max-width: 80%;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .GuestWrapper{
+        left: 11rem;
+        max-width: 80%;
+        grid-template-columns: 1fr;
+    }
+    .desnaStrelica{
+        left: 19.5rem;
+    }
+    .levaStrelica{
+        left: 5rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .GuestWrapper{
+        left: 8.5rem;
+        max-width: 80%;
+        grid-template-columns: 1fr;
+    }
+    .desnaStrelica{
+        left: 17rem;
+    }
+    .levaStrelica{
+        left: 3rem;
+    }
+}

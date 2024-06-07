@@ -115,3 +115,45 @@
   right: 39.5rem;
   bottom: 11rem;
 }
+@media only screen and (max-width: 425px) {
+  .signleApartmentImg {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .closeButton {
+    font-size: 1.5rem;
+    top: 11.5rem;
+    right: 2rem;
+
+  }
+  .navigationButtons button {
+    font-size: 1rem;
+  }
+  .signleApartmentFeatures li {
+    font-size: 1rem;
+    padding:  0;
+  }
+  .signleApartmentTitle{
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  .signleApartmentDescription {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    color: #666;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .signleApartmentDescription {
+    font-size: 0.7rem;
+    margin-bottom: 15px;
+    color: #666;
+  }
+  .navigationButtons button {
+    font-size: 0.4rem;
+  }
+}
